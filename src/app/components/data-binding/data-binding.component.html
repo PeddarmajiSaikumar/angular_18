@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-3">One Way from .ts to .html</div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+</div>
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="row">
+        <div class="col-3 bg-success">
+            <h4>{{courseName}}</h4> <!--interpolation-->
+            <input type="text" value="{{isIndian}}" placeholder="Enter the text!">
+            <input type="{{inpuType}}">
+        </div>
+        <div class="col-3">
+            <!--Property Binding-->
+            <div [class]="myClassName">Danger!!</div>
+            <input type="text" [value]="courseName">
+            <input [type]="inpuType">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <button class="btn btn-success" (click)="showAlert('Welcome Angyular v18')">Show Welcome</button>
+        <span (click)="showAlert('This is from Span...')">Click Me</span>
+        <button class="btn btn-success" (click)="changeCourseName()">Change Course </button>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <input type="text" [(ngModel)]="isIndian"> -{{isIndian}}
+            <select [(ngModel)]="stateName">
+                <option value="">select</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Kerala">Kerala</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Goa">Goa</option>
+            </select>
+            <input type="checkbox" [(ngModel)]="isIndian">
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h2>{{firstName()}}</h2>   <!-- Here we need to call signal as a method.-->
+            </div>
+        </div>
+    </div>
+</div>
