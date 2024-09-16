@@ -8,7 +8,8 @@
     <div class="col-3"></div>
     <div class="row">
         <div class="col-3 bg-success">
-            <h4>{{courseName}}</h4> <!--interpolation-->
+            <h4>{{courseName}}</h4> 
+            <!--interpolation-->
             <input type="text" value="{{isIndian}}" placeholder="Enter the text!">
             <input type="{{inpuType}}">
         </div>
@@ -21,6 +22,7 @@
     </div>
     <div class="row">
         <div class="col-3"></div>
+        <!-- Event Binding -->
         <button class="btn btn-success" (click)="showAlert('Welcome Angyular v18')">Show Welcome</button>
         <span (click)="showAlert('This is from Span...')">Click Me</span>
         <button class="btn btn-success" (click)="changeCourseName()">Change Course </button>
@@ -28,6 +30,7 @@
     </div>
     <div class="row">
         <div class="col-3">
+            <!--Two Way Binding  (ngModel) -->
             <input type="text" [(ngModel)]="isIndian"> -{{isIndian}}
             <select [(ngModel)]="stateName">
                 <option value="">select</option>

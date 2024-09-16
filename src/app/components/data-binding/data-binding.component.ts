@@ -9,12 +9,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './data-binding.component.css'
 })
 export class DataBindingComponent {
+
+
   /* In TypeScript there are four types of Data Types
     They are:
       1.String
       2.Number
       3.Boolean
-      4.date */
+      4.date 
+  */
 
       courseName:String="Angular v18";
       inpuType="checkBox";
@@ -23,7 +26,6 @@ export class DataBindingComponent {
       currentDate:Date=new Date();
       myClassName:string="bg-primary";
       stateName:string="";
-
       firstName=signal('Saikumar Peddarmaji');
 
       constructor(){
@@ -35,8 +37,8 @@ export class DataBindingComponent {
       }
 
       changeCourseName(){
-        this.courseName="React Js";
-        this.firstName.set("Dileep")
+        this.courseName="React Js";   
+        this.firstName.set("Dileep")  //Signal Method
       }
 
 }
